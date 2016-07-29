@@ -1,6 +1,6 @@
 chrome.storage.local.get('disabled', ({ disabled }) => {
   if (!disabled) {
-    document.addEventListener('pointerdown', (event) => {
+    window.addEventListener('pointerdown', (event) => {
       event.target.setPointerCapture(event.pointerId)
     }, true)
   }
